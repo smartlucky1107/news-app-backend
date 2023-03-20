@@ -24,7 +24,7 @@ def index(request):
 
         api_result = requests.get('https://api.serpwow.com/search', params)
         data = api_result.json()
-        # news = data['request_info']
+        news = data['request_info']
 
         # data = {
         #     "request_info": {
@@ -592,11 +592,11 @@ def index(request):
         #         }
         #     ]
         # }
-        news = data["news_results"]
-        for item in news:
-            item['count'] = calCount(item['link'], 'pizza')
+        # news = data["news_results"]
+        # for item in news:
+        #     item['count'] = calCount(item['link'], 'pizza')
 
-        news.sort(reverse=True, key=sort)
+        # news.sort(reverse=True, key=sort)
 
         response = JsonResponse(news, safe=False)
         return response
