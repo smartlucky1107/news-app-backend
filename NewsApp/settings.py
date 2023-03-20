@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-l(u37%bo3!pp*=^qrf4lz0g#3okv=ig=#$!uc%6h7u00c=uaa&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app']
 
 
 # Application definition
@@ -107,10 +107,7 @@ WSGI_APPLICATION = 'NewsApp.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+
 }
 
 
